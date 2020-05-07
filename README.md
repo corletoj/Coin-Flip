@@ -14,3 +14,6 @@ Press the spacebar to start the program, and use the text boxes labeled heads or
 #### 3D animation - Jonathan Torrez-Lopez & Joseph Corleto
 
 #### Texture and Sound Implementation - Joseph Corleto
+
+
+https://corletoj.github.io/Coin-Flip/
