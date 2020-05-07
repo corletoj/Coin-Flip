@@ -8,12 +8,12 @@ const flipTime = 3000; // in milliseconds
 let headsImg;
 let tailsImg;
 let sound;
-let options = ['<input type="text" id="heads" name="heads" value=""><br>', 'tails'];
+let options = ['heads', 'tails'];
 
 function preload() {
   headsImg = loadImage('quarterheads.png');
   tailsImg = loadImage('quarter-tails-MA.png');
-  font = loadFont('static/RobotoSlab-Regular.ttf');
+  font = loadFont('RobotoSlab-Regular.ttf');
   sound = loadSound('coinflip.mp3');
 }
 
