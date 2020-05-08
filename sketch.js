@@ -1,5 +1,3 @@
-/* globals background translate rotateX rotateY rotateZ keyIsPressed key millis cylinder loadImage specularMaterial createCanvas WEBGL ambientLight noStroke PI HALF_PI texture plane sin */
-
 let flip = false;
 let land = false;
 let begin = 0;
@@ -7,25 +5,25 @@ const flipHeight = -300;
 const flipTime = 3000; // in milliseconds
 let headsImg;
 let tailsImg;
-let sound;
+let flipSound;
 let options = ['heads', 'tails'];
 
 function preload() {
   headsImg = loadImage('quarterheads.png');
   tailsImg = loadImage('quarter-tails-MA.png');
   font = loadFont('RobotoSlab-Regular.ttf');
-  sound = loadSound('coinflip.mp3');
+  flipSound = loadSound('CoinFlipSound.wav');
 }
 
 function setup() {
-  createCanvas(300, 500, WEBGL);
+  createCanvas(windowWidth, windowHeight - 100, WEBGL);
   noStroke();
 }
 
 function draw() {
   ambientLight('white');
   background('beige');
-  translate(0, 200, 0);
+  translate(0, 150, 0);
 
   const time = millis() - begin;
 
@@ -41,7 +39,7 @@ function draw() {
     flip = true;
     land = false;
     begin = millis();
-    sound.play();
+    flipSound.play();
     shuffle(options, true);
   }
 
@@ -56,8 +54,7 @@ function draw() {
     flip = false;
     land = true;
   }
-
-  rotate(PI);
+  //rotate(PI);
   coin();
 }
 
